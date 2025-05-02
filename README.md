@@ -10,7 +10,7 @@ This is the official portfolio site of **Min Phyo Thura**, built with vanilla HT
 ## 🛠️ Tech Stack
 
 - HTML5
-- Tailwind CSS (with CLI purging)
+- Tailwind CSS 
 - JavaScript (Vanilla)
 - AOS (Animate On Scroll)
 - Iconify + Boxicons for dynamic icons
