@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- LIGHT/DARK MODE -->
+  <title>Min Phyo Thura | AI & Data Engineer</title>
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Iconify CDN (for tech stack icons) -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="bg-gray-950 text-white font-sans scroll-smooth">
+
+  <!-- Full-page Glow -->
+  <div id="cursor-glow"
+  class="fixed top-0 left-0 w-60 h-60 pointer-events-none rounded-full 
+      opacity-35 blur-[80px] mix-blend-screen z-[0] 
+      bg-teal-400 transition-transform duration-100 will-change-transform hidden sm:block">
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="sticky top-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur" data-aos="fade-down">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <div class="text-2xl font-bold">
+        <a href="#" class="text-teal-400">MyriosMin</a>
+      </div>
+      <ul id="navbar-links" class="hidden md:flex space-x-6">
+        <li><a href="#about" data-section="about" class="hover:text-teal-400">About</a></li>
+        <li><a href="#skills" data-section="skills" class="hover:text-teal-400">Skills</a></li>
+        <li><a href="#certs" data-section="certs" class="hover:text-teal-400">Certifications</a></li>
+        <li><a href="#projects" data-section="projects" class="hover:text-teal-400">Projects</a></li>
+        <li><a href="#contact" data-section="contact" class="hover:text-teal-400">Contact</a></li>
+      </ul>
+      <!-- Logo -->
+      <div>
+        <a href="#hero" class="block">
+          <img src="assets/icons/logo.svg" alt="Logo" class="w-20 text-teal-400 fill-current" />
+        </a>
+      </div>
+    </nav>
+  </header>
+
+<!-- Vertical Sidebar for Mobile -->
+<div id="sidebar" class="md:hidden fixed bottom-2 left-1/2 -translate-x-1/2 z-50 
+    flex flex-row items-center justify-center 
+    bg-gray-900 bg-opacity-80 rounded-full shadow-lg backdrop-blur
+    px-4 py-2 space-x-6 inset-shadow">
+    <a href="#hero" data-section="hero" title="Home" class="text-gray-500 hover:text-teal-500 text-2xl">
+      <i class='bx bx-home'></i>
+    </a>
+    <a href="#about" data-section="about" title="About" class="text-gray-500 hover:text-teal-500 text-2xl">
+      <i class='bx bx-info-circle'></i>
+    </a>
+    <a href="#skills" data-section="skills" title="Skills" class="text-gray-500 hover:text-teal-500 text-2xl">
+      <i class='bx bx-code-alt'></i>
+    </a>
+    <a href="#certs" data-section="certs" title="Certifications" class="text-gray-500 hover:text-teal-500 text-2xl">
+      <i class='bx bx-certification'></i>
+    </a>
+    <a href="#projects" data-section="projects" title="Projects" class="text-gray-500 hover:text-teal-500 text-2xl">
+      <i class='bx bx-layer'></i>
+    </a>
+    <a href="#contact" data-section="contact" title="Contact" class="text-gray-500 hover:text-teal-500 text-2xl">
+      <i class='bx bx-phone'></i>
+    </a>
+</div>
+
+  <!-- ========== HERO SECTION ========== -->
+<section id="hero">
+  <section class="min-h-screen flex items-center justify-center text-center px-4">
+    <div data-aos="fade-up">
+        <div class="w-64 h-64 overflow-hidden rounded-full border-4 border-teal-500 mx-auto mb-4 hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_20px_5px_rgba(13,148,136,0.6)]">
+            <img src="assets/images/profile.jpeg" alt="Min Profile" class="w-full h-full object-cover" />
+          </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-2">Hi! I’m Myrios Min.</h1>
+      
+      <!-- Typing animation -->
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-teal-400">
+        I <span id="typed-text" class="text-teal-400"></span><span class="blinking-cursor">|</span>
+      </h2>
+
+      <p class="text-teal-400 text-lg mb-6">AI & Data Engineering Student | Machine Learning Intern</p>
+      <p class="max-w-2xl mx-auto text-gray-400">Academic achiever and real-world problem solver building AI systems that work, scale, and sometimes scare birds.</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_20px_5px_rgba(13,148,136,0.6)]">
+        <a href="#contact" class="bg-teal-500 px-6 py-2 rounded-lg text-white text-center">
+          Get in Touch
+        </a>
+        </div>
+        <div class="hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_20px_5px_rgba(13,148,136,0.6)]">
+        <a href="https://myriosmin.com/wp-content/uploads/2025/04/minphyothura_cv_apr.pdf" target="_blank" download class="bg-teal-500 px-6 py-2 rounded-lg text-white text-center">
+          Download CV
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS ========== -->
+  <section id="stats" class="py-20 px-4 bg-gray-950 text-white">
+    <div class="max-w-5xl mx-auto text-center space-y-10">
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">During my studies at NYP, I have</h2>
+  
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <!-- Stat 1 -->
+        <div class="flex flex-col items-start" data-aos="zoom-in">
+          <p class="text-xs uppercase text-gray-400 mb-1 tracking-wide">Maintained</p>
+          <div class="flex items-center gap-4">
+          <p class="text-5xl font-bold text-teal-400 whitespace-nowrap" data-count="3.99">0</p>
+          <div class="text-sm text-gray-300 leading-tight text-left">
+            <p>cGPA</p>
+            <p>(Y2S2)</p>
+          </div>
+          </div>
+        </div>
+  
+        <!-- Stat 2 -->
+        <div class="flex flex-col items-start" data-aos="zoom-in" data-aos-delay="100">
+          <p class="text-xs uppercase text-gray-400 mb-1 tracking-wide">Achieved</p>
+          <div class="flex items-center gap-4">
+          <p class="text-5xl font-bold text-teal-400 whitespace-nowrap" data-count="12">0</p>
+          <div class="text-sm text-gray-300 leading-tight text-left">
+            <p>DIST grade</p>
+            <p>in core modules</p>
+          </div>
+          </div>
+        </div>
+  
+        <!-- Stat 3 -->
+        <div class="flex flex-col items-start" data-aos="zoom-in" data-aos-delay="200">
+          <p class="text-xs uppercase text-gray-400 mb-1 tracking-wide">Attained</p>
+          <div class="flex items-center gap-4">
+          <p class="text-5xl font-bold text-teal-400 whitespace-nowrap" data-count="15">0</p>
+          <div class="text-sm text-gray-300 leading-tight text-left">
+            <p>As or higher grade</p>
+            <p>in core modules</p>
+          </div>
+          </div>
+        </div>
+  
+        <!-- Stat 4 -->
+        <div class="flex flex-col items-start" data-aos="zoom-in" data-aos-delay="300">
+          <p class="text-xs uppercase text-gray-400 mb-1 tracking-wide">Won</p>
+          <div class="flex items-center gap-4">
+          <p class="text-5xl font-bold text-teal-400 whitespace-nowrap" data-count="1">0</p>
+          <div class="text-sm text-gray-300 leading-tight text-left">
+            <p>Hackathon</p>
+            
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="py-20 px-4 bg-gray-900 text-gray-300">
+    <div class="max-w-6xl mx-auto space-y-16">
+      <h2 class="text-3xl font-bold mb-4 text-white text-center" data-aos="fade-up">About Me</h2>
+      <!-- Polaroid Collage -->
+        <div class="flex flex-wrap justify-center gap-6 mt-10" data-aos="fade-up">
+            <!-- Card 1 -->
+            <div class="w-36 sm:w-44 md:w-52 bg-white rounded-md shadow-xl p-2 pb-4 transform rotate-[-6deg] hover:rotate-0 hover:scale-105 transition duration-300 hover:shadow-teal-500/50 hover:bg-teal-100">
+            <img src="assets/images/top_student.jpg" alt="Year 1 Top Student" class="w-full rounded-sm" />
+            <p class="mt-2 text-center text-xs sm:text-sm font-[Pacifico] text-gray-800">Year 1<br>Top Student</p>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="w-36 sm:w-44 md:w-52 bg-white rounded-md shadow-xl p-2 pb-4 transform rotate-[8deg] hover:rotate-0 hover:scale-105 transition duration-300 hover:shadow-teal-500/50 hover:bg-teal-100">
+            <img src="assets/images/qcamp.jpg" alt="Min at Q-Camp" class="w-full rounded-sm" />
+            <p class="mt-2 text-center text-xs sm:text-sm font-[Pacifico] text-gray-800">Q-Camp at CQT<br>NUS</p>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="w-36 sm:w-44 md:w-52 bg-white rounded-md shadow-xl p-2 pb-4 transform rotate-[-3deg] hover:rotate-0 hover:scale-105 transition duration-300 hover:shadow-teal-500/50 hover:bg-teal-100">
+            <img src="assets/images/arduino.jpeg" alt="Prompt Engineering Award" class="w-full rounded-sm" />
+            <p class="mt-2 text-center text-xs sm:text-sm font-[Pacifico] text-gray-800">QKD with Arduino</p>
+            </div>
+        
+            <!-- Card 4 -->
+            <div class="w-36 sm:w-44 md:w-52 bg-white rounded-md shadow-xl p-2 pb-4 transform rotate-[5deg] hover:rotate-0 hover:scale-105 transition duration-300 hover:shadow-teal-500/50 hover:bg-teal-100">
+            <img src="assets/images/nyp.jpg" alt="NYP" class="w-full rounded-sm" />
+            <p class="mt-2 text-center text-xs sm:text-sm font-[Pacifico] text-gray-800">NYP ♡</p>
+            </div>
+        </div>
+
+        <!-- Block 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-5 items-center gap-6 mb-0 pt-0">
+            <!-- Text Column: 60% = 3/5 columns -->
+            <div class="md:col-span-3 space-y-4 text-center md:text-left" data-aos="fade-left">
+            <p>
+                <em>Current</em> top student of the cohort. ASEAN scholarship recipient. AI tinkerer who once made a Hokkien speech model.
+            </p>
+            <p>
+                I specialize in building practical, scalable and fun AI systems — like image-to-image models, resume classifier, Raspberry Pi–powered object detectors, and sentiment analysis models that track the S&P500 better than my risk-loving friend.
+            </p>
+            </div>
+        
+            <!-- Image Column 1: 20% = 1/5 columns -->
+            <div class="md:col-span-1 flex justify-center" data-aos="fade-right">
+            <img src="assets/images/prompt_award.jpg" alt="Prompt Engineering Award"
+                class="w-24 md:w-full aspect-[3/4] object-cover rounded-xl shadow-md transition duration-300 hover:scale-105 hover:shadow-teal-500/50" />
+            </div>
+        
+            <!-- Image Column 2: 20% = 1/5 columns -->
+            <div class="md:col-span-1 flex justify-center" data-aos="fade-right">
+            <img src="assets/images/cca.jpg" alt="CCA"
+                class="w-24 md:w-full aspect-[3/4] object-cover object-bottom rounded-xl shadow-md transition duration-300 hover:scale-105 hover:shadow-teal-500/50" />
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-5 items-center gap-6 mt-0 pt-0">
+            <!-- Image Column 1: 20% = 1/5 columns -->
+            <div class="md:col-span-1 flex justify-center" data-aos="fade-right">
+                <img src="assets/images/back_portrait.jpeg" alt="Min Portrait"
+                class="w-40 md:w-96 aspect-[3/4] object-cover rounded-xl shadow-lg transition duration-300 hover:scale-105 hover:shadow-teal-500/50" />
+            </div>
+        
+            <!-- Image Column 2: 20% = 1/5 columns -->
+            <div class="md:col-span-1 flex justify-center" data-aos="fade-right">
+            <img src="assets/images/raspberryPi.jpeg" alt="Raspberry Pi"
+                class="w-24 md:w-full aspect-[3/4] object-cover object-bottom rounded-xl shadow-md transition duration-300 hover:scale-105 hover:shadow-teal-500/50" />
+            </div>
+
+            <!-- Text Column: 60% = 3/5 columns -->
+            <div class="md:col-span-3 space-y-4 text-center md:text-left" data-aos="fade-left">
+                <p>
+                    I love self-studying and taught myself ML/DL algorithms from DataCamp <em>while juggling part-time jobs, weekend shifts, and late-night debugging marathons</em>. I believe in turning constraints into creativity — and building things that actually work, not just good grades.
+                </p>
+                <p>
+                    Oh, and I built this site from scratch because WordPress tried to charge me for being responsive.
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="py-20 px-4 text-white">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Skills & Technologies</h2>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Basket 1: AI / ML -->
+        <div class="relative bg-gray-800 border border-gray-700 rounded-lg pt-6 overflow-hidden hover:border-teal-500" data-aos="zoom-in">
+          <div class="absolute inset-0 bg-[linear-gradient(135deg,_#2d2d2d_1px,_transparent_1px),linear-gradient(45deg,_#2d2d2d_1px,_transparent_1px)] bg-[size:20px_20px] opacity-10 z-0 rounded-lg pointer-events-none"></div>
+          <h3 class="text-xl font-semibold mb-4 relative z-10 text-center text-teal-400">AI / Machine Learning</h3>
+          <hr style="width: 80%; margin: auto;">
+          <div id="basket-ai" class="relative h-64 w-full bg-gray-800 overflow-hidden"></div>
+        </div>
+  
+        <!-- Basket 2: Data Engineering -->
+        <div class="relative bg-gray-800 border border-gray-700 rounded-lg pt-6 overflow-hidden hover:border-teal-500" data-aos="zoom-in" data-aos-delay="100">
+          <div class="absolute inset-0 bg-[linear-gradient(135deg,_#2d2d2d_1px,_transparent_1px),linear-gradient(45deg,_#2d2d2d_1px,_transparent_1px)] bg-[size:20px_20px] opacity-10 z-0 rounded-lg pointer-events-none"></div>
+          <h3 class="text-xl font-semibold mb-4 relative z-10 text-center text-teal-400">Data Engineering</h3>
+          <hr style="width: 80%; margin: auto;">
+          <div id="basket-data" class="relative h-64 w-full bg-gray-800 overflow-hidden"></div>
+        </div>
+  
+        <!-- Basket 3: Web & App Development -->
+        <div class="relative bg-gray-800 border border-gray-700 rounded-lg pt-6 overflow-hidden hover:border-teal-500" data-aos="zoom-in" data-aos-delay="200">
+          <div class="absolute inset-0 bg-[linear-gradient(135deg,_#2d2d2d_1px,_transparent_1px),linear-gradient(45deg,_#2d2d2d_1px,_transparent_1px)] bg-[size:20px_20px] opacity-10 z-0 rounded-lg pointer-events-none"></div>
+          <h3 class="text-xl font-semibold mb-4 relative z-10 text-center text-teal-400">Web & App Development</h3>
+          <hr style="width: 80%; margin: auto;">
+          <div id="basket-web" class="relative h-64 w-full bg-gray-800 overflow-hidden"></div>
+        </div>
+  
+        <!-- Basket 4: DevOps & Production -->
+        <div class="relative bg-gray-800 border border-gray-700 rounded-lg pt-6 overflow-hidden hover:border-teal-500" data-aos="zoom-in" data-aos-delay="300">
+          <div class="absolute inset-0 bg-[linear-gradient(135deg,_#2d2d2d_1px,_transparent_1px),linear-gradient(45deg,_#2d2d2d_1px,_transparent_1px)] bg-[size:20px_20px] opacity-10 z-0 rounded-lg pointer-events-none"></div>
+          <h3 class="text-xl font-semibold mb-4 relative z-10 text-center text-teal-400">DevOps & Production</h3>
+          <hr style="width: 80%; margin: auto;">
+          <div id="basket-devops" class="relative h-64 w-full bg-gray-800 overflow-hidden"></div>
+        </div>
+  
+      </div>  
+  
+        <!-- Soft Skills Rotator -->
+        <div class="pt-10 text-center text-lg text-gray-300" data-aos="fade-up">
+            <p class="mb-2 text-xl"><em>My friends and lecturers say I am a</em></p>
+        
+            <div class="relative h-10 w-full overflow-hidden flex justify-center">
+            <div id="soft-skill-wrapper" class="relative transition-transform duration-500 ease-in-out text-2xl">
+                <!-- JS  -->
+            </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <section id="certs" class="py-20 px-4 bg-gray-900 text-white" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-2" data-aos="fade-up">Certifications</h2>
+      <img src="assets/icons/cert.svg" alt="Certifications" data-aos="fade-up" class="block w-24 mx-auto mb-0 mt-0 p-0 leading-none"/>
+  
+      <div id="cert-stack" class="relative w-full h-60 flex justify-center items-end gap-0" data-aos="fade-up">
+        <!-- Cert cards go here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="py-20 px-4 text-white">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">Projects</h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <div data-aos="zoom-in" data-aos-delay="100" class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 hover:shadow-teal-500/40">
+            <img src="assets/projects/sigmaPrompter.jpeg" alt="AI Image Guessing Game" class="w-full h-48 object-cover">
+            <div class="p-4 space-y-2">
+              <h3 class="text-xl font-semibold">AI Image Guessing Game</h3>
+              <p class="text-sm text-gray-300">A fun web app for Open House showcase where users guess the <em>prompt</em> that generated the AI-modified image from an image-to-image Diffusion model.</p>
+              <div class="flex flex-wrap items-center gap-2 text-sm text-teal-400 mt-2">
+                <span>Diffusion Model |</span>
+                <span>Image Generation |</span>
+                <span>Interactive Game</span>
+              </div>
+              <div class="flex gap-4 mt-4">
+                <p class="text-sm text-teal-400 italic">Still in development</p>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div data-aos="zoom-in" data-aos-delay="200" class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 hover:shadow-teal-500/40">
+            <img src="assets/projects/AldiTalk.png" alt="AldiTalk Elderly Dialect Translator" class="w-full h-48 object-cover">
+            <div class="p-4 space-y-2">
+              <h3 class="text-xl font-semibold">AldiTalk: Dialect Translator for Elderly</h3>
+              <p class="text-sm text-gray-300">
+                A real-time speech-to-speech translator for local dialects like Hokkien & Cantonese, built for elderly care homes. Senior-friendly UI with Azure + GPT-4o + custom TTS/STT.
+              </p>
+              <div class="flex flex-wrap items-center gap-2 text-sm text-teal-400 mt-2">
+                <span>Full-Stack |</span>
+                <span>Azure AI |</span>
+                <span>GPT-4o |</span>
+                <span>Hugging Face</span>
+              </div>
+              <div class="flex gap-4 mt-4 items-center">
+                <p class="text-sm text-teal-400">See more on:</p>
+                <a href="https://github.com/myriosMin/AldiTalk" class="text-teal-400 hover:text-white text-2xl" target="_blank">
+                  <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=GFAS6MAVhic" class="text-teal-400 hover:text-white text-2xl" target="_blank">
+                  <span class="iconify" data-icon="mdi:youtube" data-inline="false"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div data-aos="zoom-in" data-aos-delay="300" class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 hover:shadow-teal-500/40">
+            <img src="assets/images/raspberryPi.jpeg" alt="AviDefender Bird Detection System" class="w-full h-48 object-cover">
+            <div class="p-4 space-y-2">
+              <h3 class="text-xl font-semibold">AviDefender: Bird Detection for Hawker Centres</h3>
+              <p class="text-sm text-gray-300">
+                Real-time AI bird detector + deterrent using Raspberry Pi (YOLOv11 TFLite), SenseHat + Arduino. Live dashboard, alerts, and MySQL logging to protect tray stations from scavenging birds.
+              </p>
+              <div class="flex flex-wrap items-center gap-2 text-sm text-teal-400 mt-2">
+                <span>IOT |</span>
+                <span>Obj Detection |</span>
+                <span>MQTT |</span>
+                <span>Flask</span>
+              </div>
+              <div class="flex gap-4 mt-4 items-center">
+                <p class="text-sm text-teal-400">See more on:</p>
+                <a href="https://github.com/myriosMin/bird-detection-with-Pi4B" class="text-teal-400 hover:text-white text-2xl" target="_blank">
+                  <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=6p_sFcpTxOY" class="text-teal-400 hover:text-white text-2xl" target="_blank">
+                  <span class="iconify" data-icon="mdi:youtube" data-inline="false"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 4 -->
+          <div data-aos="zoom-in" data-aos-delay="100" class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 hover:shadow-teal-500/40">
+            <img src="assets/projects/PlantiDoc.png" alt="PlantiDoc AI Plant Diagnosis" class="w-full h-48 object-cover">
+            <div class="p-4 space-y-2">
+              <h3 class="text-xl font-semibold">PlantiDoc: AI Plant Disease Diagnosis</h3>
+              <p class="text-sm text-gray-300">
+                Diagnose plant diseases in real-time using images with YOLOv11 + EfficientNet + Ollama LLM. Smart, extensible, and farmer-friendly AI web tool built with Flask.
+              </p>
+              <div class="flex flex-wrap items-center gap-2 text-sm text-teal-400 mt-2">
+                <span>Obj Classification |</span>
+                <span>Obj Segmentation |</span>
+                <span>Ollama LLM |</span>
+                <span>Flask</span>
+              </div>
+              <div class="flex gap-4 mt-4 items-center">
+                <p class="text-sm text-teal-400">See more on:</p>
+                <a href="https://github.com/myriosMin/PlantiDoc-deploy" class="text-teal-400 hover:text-white text-2xl" target="_blank">
+                  <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 5 -->
+          <div data-aos="zoom-in" data-aos-delay="200" class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 hover:shadow-teal-500/40">
+            <img src="assets/projects/cherrypick.png" alt="CherryPick Vehicle Classifier" class="w-full h-48 object-cover">
+            <div class="p-4 space-y-2">
+              <h3 class="text-xl font-semibold">CherryPick CNN: Object Classifier</h3>
+              <p class="text-sm text-gray-300">
+                Custom <em>daring</em> CNN vs. MobileNetV2 for classifying vehicles (airplane, automobile, truck) on low-res 32x32 data. Built with TensorFlow, Keras & fine-tuning techniques with cherry-picked inspirations from EfficientNet, ResNet and MobileNet.
+              </p>
+              <div class="flex flex-wrap items-center gap-2 text-sm text-teal-400 mt-2">
+                <span>CNN |</span>
+                <span>Transfer Learning |</span>
+                <span>TensorFlow |</span>
+                <span>Kaggle</span>
+              </div>
+              <div class="flex gap-4 mt-4 items-center">
+                <p class="text-sm text-teal-400">See more on:</p>
+                <a href="https://github.com/myriosMin/CherryPick-CNN-Model" class="text-teal-400 hover:text-white text-2xl" target="_blank">
+                  <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                </a>
+                <a href="https://www.kaggle.com/code/myrios/adl-cherrypick" class="text-teal-400 hover:text-white text-3xl" target="_blank">
+                  <span class="iconify" data-icon="simple-icons:kaggle" data-inline="false"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 6 -->
+          <div data-aos="zoom-in" data-aos-delay="300" class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition transform hover:-translate-y-2 hover:shadow-teal-500/40">
+            <img src="assets/projects/sentiment.jpeg" alt="Black Guard Investment Dashboard" class="w-full h-48 object-cover">
+            <div class="p-4 space-y-2">
+              <h3 class="text-xl font-semibold">S&P500 News Sentiment Analysis</h3>
+              <p class="text-sm text-gray-300">
+                An up-to-date and fully interactive NLP-finance dashboard using VADER sentiment analysis on global news (BBC, NYT, Reddit) from 2008 to 2024, informing young investors of the volatility and Value-at-Risk involved in long-term S&P500 investment
+              </p>
+              <div class="flex flex-wrap items-center gap-2 text-sm text-teal-400 mt-2">
+                <span>EDA |</span>
+                <span>Power BI |</span>
+                <span>Yahoo Finance |</span>
+                <span>CRISP-DM</span>
+              </div>
+              <div class="flex gap-4 mt-4 items-center">
+                <p class="text-sm text-teal-400">See more on:</p>
+                <a href="https://github.com/myriosMin/SP500-News-Sentiment-Analysis" class="text-teal-400 hover:text-white text-2xl" target="_blank">
+                  <span class="iconify" data-icon="mdi:github" data-inline="false"></span>
+                </a>
+                <a href="https://myriosmin.com/2024/08/16/exploring-the-impact-of-news-sentiment-on-market-trends/" class="text-teal-400 hover:text-white text2-2xl" target="_blank">
+                  <span class="iconify" data-icon="fa6-brands:wordpress" data-inline="false"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="py-24 px-6 bg-gray-900 text-white">
+        <div class="max-w-3xl mx-auto text-center space-y-8">
+        <h2 class="text-4xl font-bold" data-aos="fade-up">Connect with me <span class="-tracking-[.15em] text-teal-400">ʕ⁠っ⁠•⁠ᴥ⁠•⁠ʔ⁠っ</span></h2>
+        <p class="text-lg text-gray-400" data-aos="fade-up" data-aos-delay="100">
+            Whether you want to collaborate, hire, or just say hi, I’d love to hear from you.<br>
+            Reach out on any platform below; I’m probably online somewhere.
+        </p>
+    
+        <div class="grid grid-cols-3 gap-6 pt-4 justify-items-center sm:flex sm:justify-center sm:flex-wrap" data-aos="zoom-in" data-aos-delay="200">
+            <!-- GitHub -->
+            <a href="https://github.com/myriosMin" target="_blank" title="GitHub"
+            class="bg-gray-800 p-4 rounded-full hover:bg-teal-500/30 hover:scale-110 transition duration-300 shadow-md hover:-translate-y-2 hover:shadow-teal-500/40">
+            <span class="iconify text-3xl text-teal-400" data-icon="mdi:github"></span>
+            </a>
+    
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/min-phyo-thura/" target="_blank" title="LinkedIn"
+            class="bg-gray-800 p-4 rounded-full hover:bg-teal-500/30 hover:scale-110 transition duration-300 shadow-md hover:-translate-y-2 hover:shadow-teal-500/40">
+            <span class="iconify text-3xl text-teal-400" data-icon="mdi:linkedin"></span>
+            </a>
+    
+            <!-- WordPress -->
+            <a href="https://myriosmin.com" target="_blank" title="WordPress"
+            class="bg-gray-800 p-4 rounded-full hover:bg-teal-500/30 hover:scale-110 transition duration-300 shadow-md hover:-translate-y-2 hover:shadow-teal-500/40">
+            <span class="iconify text-3xl text-teal-400" data-icon="mdi:wordpress"></span>
+            </a>
+    
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6580150904" target="_blank" title="WhatsApp"
+            class="bg-gray-800 p-4 rounded-full hover:bg-teal-500/30 hover:scale-110 transition duration-300 shadow-md hover:-translate-y-2 hover:shadow-teal-500/40">
+            <span class="iconify text-3xl text-teal-400" data-icon="mdi:whatsapp"></span>
+            </a>
+    
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/channel/UC-Q1zoL4LBtRIPcRyOpsb3w" target="_blank" title="YouTube"
+            class="bg-gray-800 p-4 rounded-full hover:bg-teal-500/30 hover:scale-110 transition duration-300 shadow-md hover:-translate-y-2 hover:shadow-teal-500/40">
+            <span class="iconify text-3xl text-teal-400" data-icon="mdi:youtube"></span>
+            </a>
+    
+            <!-- Kaggle -->
+            <a href="https://www.kaggle.com/myrios" target="_blank" title="Kaggle"
+            class="bg-gray-800 p-4 rounded-full hover:bg-teal-500/30 hover:scale-110 transition duration-300 shadow-md hover:-translate-y-2 hover:shadow-teal-500/40">
+            <span class="iconify text-3xl text-teal-400" data-icon="simple-icons:kaggle"></span>
+            </a>
+        </div>
+        </div>
+    </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="text-center py-6 text-sm text-gray-500">
+    © 2025 Min Phyo Thura. Built with 💻 + 🧠 + ♫
+  </footer>
+
+  <!-- ========== DARK MODE TOGGLE SCRIPT ========== -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+
+  <!-- ========== TYPING ANIMATION SCRIPT ========== -->
+  <script>
+    const phrases = [
+      "am Min.",
+      "am a student.",
+      "study AI & Data Engineering.",
+      "like tea over coffee.",
+      "can debug other people's code.",
+      "stay updated with tech news.",
+      "love singing.",
+      "am multilingual.",
+    ];
+  
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+    const typedText = document.getElementById("typed-text");
+    const speed = 100; // typing speed
+    const pause = 1500; // pause between phrases
+  
+    function type() {
+      const phrase = phrases[currentPhrase];
+      if (isDeleting) {
+        currentChar--;
+        typedText.textContent = phrase.substring(0, currentChar);
+        if (currentChar === 0) {
+          isDeleting = false;
+          currentPhrase = (currentPhrase + 1) % phrases.length;
+          setTimeout(type, 500);
+        } else {
+          setTimeout(type, speed / 2);
+        }
+      } else {
+        currentChar++;
+        typedText.textContent = phrase.substring(0, currentChar);
+        if (currentChar === phrase.length) {
+          isDeleting = true;
+          setTimeout(type, pause);
+        } else {
+          setTimeout(type, speed);
+        }
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      type();
+    });
+  </script>
+  
+  <style>
+    /* ========== TYPING ANIMATION ========== */
+    .blinking-cursor {
+      display: inline-block;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1 }
+      50% { opacity: 0 }
+    }
+  </style>
+
+  <!-- ========== CURSOR GLOW ========== -->
+  <script>
+    const glow = document.getElementById('cursor-glow');
+
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX - glow.offsetWidth / 2;
+      const y = e.clientY - glow.offsetHeight / 2;
+      glow.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+  
+  <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-out-cubic',
+    });
+    </script>
+
+    <!-- ========== STATISTICS ANIMATION ========== -->
+    <script>
+        const statCounters = document.querySelectorAll('[data-count]');
+        let hasAnimatedStats = false;
+      
+        function animateCounters() {
+          if (hasAnimatedStats) return;
+          hasAnimatedStats = true;
+      
+          statCounters.forEach(el => {
+            const target = parseFloat(el.getAttribute('data-count'));
+            let current = 0;
+            const duration = 4000;
+            const isFloat = !Number.isInteger(target);
+            const steps = isFloat ? 80 : 60;
+            const increment = target / steps;
+      
+            const counter = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                el.textContent = isFloat ? target.toFixed(2) : target;
+                clearInterval(counter);
+              } else {
+                el.textContent = isFloat ? current.toFixed(2) : Math.floor(current);
+              }
+            }, duration / steps);
+          });
+        }
+      
+        // Trigger when section is in view
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounters();
+              observer.disconnect(); // Only run once
+            }
+          });
+        });
+      
+        observer.observe(document.getElementById('stats'));
+    </script>
+
+    <!-- ========== SKILLS ANIMATION ========== -->
+    <style>
+        .soft-skill-line {
+          height: 2.5rem;
+          line-height: 2.5rem;
+          text-align: center;
+        }
+      
+        .fade-overlay {
+          pointer-events: none;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(to bottom, rgba(17,24,39,1) 0%, rgba(17,24,39,0) 20%, rgba(17,24,39,0) 80%, rgba(17,24,39,1) 100%);
+        }
+    </style>
+
+    <script>
+          const skills = [
+            "Fast Learner",
+            "Team Leader",
+            "Active Listener",
+            "Enthusiastic",
+            "Genuinely Love Learning",
+        ];
+
+        const wrapper = document.getElementById("soft-skill-wrapper");
+
+        // Create stacked lines
+        skills.forEach((text, i) => {
+            const div = document.createElement("div");
+            div.className = "soft-skill-line text-teal-400 font-semibold";
+            div.textContent = text;
+            wrapper.appendChild(div);
+        });
+
+        let current = 0;
+        const total = skills.length;
+
+        function rotateSkill() {
+            current = (current + 1) % total;
+            wrapper.style.transform = `translateY(-${current * 2.5}rem)`;
+        }
+
+        setInterval(rotateSkill, 2500);
+
+        function createBouncingIcons(basketId, items, ballSize = 50) {
+            const basket = document.getElementById(basketId);
+            const balls = [];
+        
+            function createBall({ icon, label }) {
+            const el = document.createElement('div');
+            el.className = 'absolute rounded-full flex items-center justify-center text-white text-xs bg-teal-500 shadow-md';
+            el.style.width = `${ballSize}px`;
+            el.style.height = `${ballSize}px`;
+            el.addEventListener('mouseenter', () => {
+                const tooltip = el.querySelector('.tooltip');
+                tooltip.classList.add('opacity-100');
+              
+                setTimeout(() => {
+                  tooltip.classList.remove('opacity-100');
+                }, 2000);
+              });
+            if (icon && icon.startsWith('custom:')) 
+            {
+                // Use local image (PNG or SVG)
+                const imgPath = `assets/icons/${icon.split(':')[1]}.svg`;  
+                el.innerHTML = `
+                    <div class="group w-full h-full flex items-center justify-center relative">
+                        <img src="${imgPath}" alt="${label}" title="${label}" class="w-full h-full object-contain p-2 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-teal-500/50 rounded-full" />
+                        
+                        <div class="tooltip absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none">
+                        ${label}
+                        </div>
+                    </div>`;
+              } else if (icon) {
+                // Use iconify
+                el.innerHTML = `
+                    <div class="group w-full h-full flex items-center justify-center relative">
+                    <span class="iconify w-full h-full p-2 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-teal-500/50 rounded-full" data-icon="${icon}" title="${label}"></span>
+                
+                    <div class="tooltip absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-700 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200 pointer-events-none">
+                        ${label}
+                    </div>
+                    </div>`;
+              } else {
+                // Fallback text
+                el.innerText = label;
+              }
+        
+            basket.appendChild(el);
+            
+            let x, y, safe = false, tries = 0;
+            while (!safe && tries < 100) {
+            x = Math.random() * (basket.clientWidth - ballSize);
+            y = Math.random() * (basket.clientHeight - ballSize);
+            safe = true;
+            for (let b of balls) {
+                const dx = b.x - x;
+                const dy = b.y - y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < ballSize + 4) { // minimum 4px spacing
+                safe = false;
+                break;
+                }
+            }
+            tries++;
+            }
+            if (tries === 100) {
+                console.warn('Could not place all balls without overlap.');
+                x = Math.random() * (basket.clientWidth - ballSize);
+                y = Math.random() * (basket.clientHeight - ballSize);
+            }
+            return {
+                el, x, y,
+                dx: (Math.random() * 2 - 1) * 1.2,
+                dy: (Math.random() * 2 - 1) * 1.2
+            };
+            }
+        
+            // Create balls
+            items.forEach(item => balls.push(createBall(item)));
+        
+            function animate() {
+            for (let i = 0; i < balls.length; i++) {
+                const b = balls[i];
+                b.x += b.dx;
+                b.y += b.dy;
+        
+                // Wall bounce
+                if (b.x <= 0 || b.x + ballSize >= basket.clientWidth) b.dx *= -1;
+                if (b.y <= 0 || b.y + ballSize >= basket.clientHeight) b.dy *= -1;
+        
+                // Simple collision bounce
+                for (let j = i + 1; j < balls.length; j++) {
+                const b2 = balls[j];
+                const dx = b.x - b2.x;
+                const dy = b.y - b2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < ballSize) {
+                    [b.dx, b2.dx] = [b2.dx, b.dx];
+                    [b.dy, b2.dy] = [b2.dy, b.dy];
+                }
+                }
+        
+                b.el.style.transform = `translate(${b.x}px, ${b.y}px)`;
+            }
+            requestAnimationFrame(animate);
+            }
+        
+            animate();
+        }
+        
+        // Call it for each basket:
+        
+        createBouncingIcons('basket-ai', [
+            { icon: 'logos:tensorflow', label: 'TensorFlow' },
+            { icon: 'logos:pytorch-icon', label: 'PyTorch' },
+            { icon: 'skill-icons:scikitlearn-dark', label: 'Scikit-learn' },
+            { icon: 'skill-icons:opencv-dark', label: 'OpenCV' },
+            { icon: 'skill-icons:azure-dark', label: 'AzureAI' },
+            { icon: 'skill-icons:python-dark', label: 'Python' },
+            { icon: 'custom:huggingface', label: 'HuggingFace' },
+            { icon: 'custom:chatgpt', label: 'ChatGPT' },
+            { icon: 'skill-icons:raspberrypi-dark', label: 'RaspberryPi' },
+        ]);
+        
+        createBouncingIcons('basket-data', [
+            { icon: 'logos:mysql-icon', label: 'SQL' },
+            { icon: 'logos:pandas', label: 'Pandas' },
+            { icon: 'logos:numpy', label: 'NumPy' },
+            { icon: 'custom:powerbi', label: 'PowerBI' },
+            { icon: 'custom:mqtt', label: 'MQTT' },
+            { icon: 'custom:beautiful-soup', label: 'Beautiful Soup' },
+            { icon: 'custom:matplotlib', label: 'MatPlotLib' },
+            { icon: 'custom:seaborn', label: 'Seaborn' },
+            { icon: 'skill-icons:nodejs-dark', label: 'NodeJS' },
+            { icon: 'skill-icons:ros-dark', label: 'ROS' },
+            { icon: 'logos:postgresql', label: 'PostgreSQL' },
+            { icon: 'skill-icons:redis-dark', label: 'Redis' },
+            { icon: 'skill-icons:arduino', label: 'Arduino' },
+        ]);
+        
+        createBouncingIcons('basket-web', [
+            { icon: 'logos:html-5', label: 'HTML' },
+            { icon: 'logos:css-3', label: 'CSS' },
+            { icon: 'skill-icons:tailwindcss-dark', label: 'Tailwind' },
+            { icon: 'logos:javascript', label: 'JavaScript' },
+            { icon: 'skill-icons:flask-dark', label: 'Flask' },
+            { icon: 'skill-icons:wordpress', label: 'Wordpress' },
+            { icon: 'skill-icons:fastapi', label: 'FastAPI' },
+        ]);
+        
+        createBouncingIcons('basket-devops', [
+            { icon: 'logos:git-icon', label: 'Git' },
+            { icon: 'logos:docker-icon', label: 'Docker' },
+            { icon: 'logos:visual-studio-code', label: 'VS Code' },
+            { icon: 'skill-icons:github-dark', label: 'GitHub' },
+            { icon: 'skill-icons:aws-dark', label: 'AWS' },
+            { icon: 'skill-icons:kubernetes', label: 'Kubernetes' },
+            { icon: 'skill-icons:anaconda-dark', label: 'Anaconda' },
+            { icon: 'skill-icons:cassandra-dark', label: 'Cassandra' },
+            { icon: 'custom:hadoop', label: 'Hadoop' },
+            { icon: 'custom:spark', label: 'PySpark' },
+        ]);
+    </script>
+
+    <!-- ========== CERTIFICATIONS ANIMATION ========== -->
+    <!-- Modal -->
+    <div id="cert-modal" class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-900 rounded-xl max-w-3xl w-full p-6 relative text-center">
+        <button id="close-modal" class="absolute top-3 right-3 text-white text-2xl hover:text-teal-400">&times;</button>
+        <h3 id="modal-title" class="text-2xl font-semibold text-teal-400 mb-4"></h3>
+        <img id="modal-image" src="" alt="Certificate" class="w-full max-h-[70vh] object-contain rounded-xl shadow-lg" />
+        </div>
+    </div>
+    <script>
+        const certs = [
+            { src: "assets/certs/ml_for_timeseries_data_page1.png", title: "ML for Time Series Data" },
+            { src: "assets/certs/time_series_analysis_in_python_page1.png", title: "Time Series Analysis in Python" },
+            { src: "assets/certs/xgboost_page1.png", title: "XGBoost" },
+            { src: "assets/certs/introduction_to_statistics_in_python_page1.png", title: "Introduction to Statistics in Python" },
+            { src: "assets/certs/4.2_statistical_thinking_in_python2_page1.png", title: "Statistical Thinking in Python (Part 2)" },
+            { src: "assets/certs/6.2_cluster_analysis_in_python_page1.png", title: "Cluster Analysis in Python" },
+            { src: "assets/certs/8.4_into_to_git_page1.png", title: "Intro to Git" },
+            { src: "assets/certs/intermediate_sql_page1.png", title: "Intermediate SQL" },
+            { src: "assets/certs/2.2_manipulating_time_series_dataframe_in_python_page1.png", title: "Manipulating Time Series DataFrames" },
+            { src: "assets/certs/6.1_unsupervised_leanring_in_python_page1.png", title: "Unsupervised Learning in Python" },
+            { src: "assets/certs/nlp_with_spaCy_page1.png", title: "NLP with spaCy" },
+            { src: "assets/certs/8.3_into_to_shell_page1.png", title: "Intro to Shell" },
+            { src: "assets/certs/Google_4_page1.png", title: "Google Certificate 4" },
+            { src: "assets/certs/Google_3_page1.png", title: "Google Certificate 3" },
+            { src: "assets/certs/Google_2_page1.png", title: "Google Certificate 2" },
+            { src: "assets/certs/Google_1_page1.png", title: "Google Certificate 1" },
+            { src: "assets/certs/prompt_eng_award.jpeg", title: "Prompt Engineering Challenge" },
+            { src: "assets/certs/AI900_Min Phyo Thura_page1.png", title: "Microsoft AI-900: Azure AI Fundamentals" },
+            { src: "assets/certs/MinPhyoThura_NVIDIA_FundamentalsOfDeepLearning_page1.png", title: "NVIDIA Fundamentals of Deep Learning" },
+            { src: "assets/certs/AI4I®-Foundations-in-AI_Min-Phyo-Thura_page1.png", title: "Foundations in AI (AI4I)" },
+        ];
+      
+        const stack = document.getElementById("cert-stack");
+        const cardCount = certs.length;
+        function renderCertStack() {
+            stack.innerHTML = ""; // Clear previous cards
+            const containerWidth = stack.offsetWidth;
+            const cardWidth = 240;
+            const visibleFanWidth = containerWidth - cardWidth;
+            const spacing = Math.min(visibleFanWidth / (cardCount - 1), cardWidth - 30);
+          
+            certs.forEach((cert, i) => {
+              const card = document.createElement("div");
+              card.className = `
+                absolute transition-all duration-500 ease-in-out
+                h-40 w-60 bg-gray-800 rounded-xl shadow-lg
+                hover:z-30 hover:scale-125 
+              `;
+          
+              card.style.right = `${i * spacing}px`;
+              card.style.zIndex = i;
+          
+              card.innerHTML = `
+                <img src="${cert.src}" alt="${cert.title}" title="${cert.title}"
+                  class="w-full h-full object-cover rounded-xl cursor-pointer" />
+              `;
+          
+              card.addEventListener("mouseenter", () => {
+                stack.querySelectorAll("div").forEach((el, j) => {
+                  if (j < i) el.style.transform = "translateX(10px) rotate(4deg)";
+                  else if (j > i) el.style.transform = "translateX(-10px) rotate(-4deg)";
+                  else el.style.transform = "translateY(-140px) scale(1.2)";
+                });
+              });
+          
+              card.addEventListener("mouseleave", () => {
+                stack.querySelectorAll("div").forEach((el) => {
+                  el.style.transform = "translateX(0) rotate(0) scale(1)";
+                });
+              });
+
+              card.addEventListener("click", () => {
+                document.getElementById("modal-image").src = cert.src;
+                document.getElementById("modal-title").textContent = cert.title;
+                document.getElementById("cert-modal").classList.remove("hidden");
+              });
+          
+              stack.appendChild(card);
+            });
+          }
+          
+          // Run initially and on resize
+          renderCertStack();
+          window.addEventListener("resize", renderCertStack);
+
+          document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("cert-modal");
+            const closeBtn = document.getElementById("close-modal");
+          
+            if (closeBtn) {
+              closeBtn.addEventListener("click", () => {
+                modal.classList.add("hidden");
+              });
+            }
+          });
+
+    </script>
+
+    <!-- ========== NAVBAR SCROLL HIGHLIGHT ========== -->
+    <style>
+        html {
+          scroll-behavior: smooth;
+          scroll-padding-top: 5rem;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .inset-shadow {
+            box-shadow: inset 0 2px 6px rgba(0, 255, 255, 0.2),
+                        inset 0 -2px 6px rgba(0, 255, 255, 0.2),
+                        inset 2px 0 6px rgba(0, 255, 255, 0.2),
+                        inset -2px 0 6px rgba(0, 255, 255, 0.2);
+        }
+    </style>
+    <script>
+        const navLinks = document.querySelectorAll('#navbar-links a[data-section]');
+      
+        window.addEventListener('scroll', () => {
+          let currentSection = null;
+      
+          navLinks.forEach(link => {
+            const sectionId = link.getAttribute('data-section');
+            const section = document.getElementById(sectionId);
+            const rect = section.getBoundingClientRect();
+      
+            // Section is considered "active" if top is above center of viewport and bottom is still visible
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+              currentSection = sectionId;
+            }
+          });
+      
+          navLinks.forEach(link => {
+            const isActive = link.getAttribute('data-section') === currentSection;
+            link.classList.toggle('text-teal-400', isActive);
+            link.classList.toggle('font-semibold', isActive);
+          });
+        });
+        const navLinksSide = document.querySelectorAll('#sidebar a[data-section]');
+      
+        window.addEventListener('scroll', () => {
+          let currentSection = null;
+      
+          navLinksSide.forEach(link => {
+            const sectionId = link.getAttribute('data-section');
+            const section = document.getElementById(sectionId);
+            const rect = section.getBoundingClientRect();
+      
+            // Section is considered "active" if top is above center of viewport and bottom is still visible
+            if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+              currentSection = sectionId;
+            }
+          });
+      
+          navLinksSide.forEach(link => {
+            const isActive = link.getAttribute('data-section') === currentSection;
+            link.classList.toggle('text-teal-400', isActive);
+            link.classList.toggle('font-semibold', isActive);
+          });
+        });
+      </script>
+</body>
+</html>
