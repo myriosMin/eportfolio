@@ -1,10 +1,11 @@
 # 🌐 Personal Portfolio Website
 ![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
+
 This is the official portfolio site of **Min Phyo Thura**, built with vanilla HTML, Tailwind CSS, and JavaScript. It highlights selected AI, Data Engineering, and Full-Stack projects across various domains including NLP, Computer Vision, IoT, and Audit Automation.
 
 ## 🚀 Live Demo
 
-> [View the Portfolio](https://yourusername.github.io/portfolio2)
+> [View the Portfolio]([https://yourusername.github.io/portfolio2](https://myriosmin.github.io/eportfolio/))
 
 ## 🛠️ Tech Stack
 
