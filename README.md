@@ -5,7 +5,7 @@ This is the official portfolio site of **Min Phyo Thura**, built with vanilla HT
 
 ## 🚀 Live Demo
 
-> [View the Portfolio]([https://yourusername.github.io/portfolio2](https://myriosmin.github.io/eportfolio/))
+![View the Portfolio]([https://yourusername.github.io/portfolio2](https://myriosmin.github.io/eportfolio/))
 
 ## 🛠️ Tech Stack
 
